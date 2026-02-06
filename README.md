@@ -214,3 +214,50 @@ jupyter notebook C3M2_Assignment.ipynb
 ## Author
 
 Fruit Guard Pro Team
+
+
+---
+
+## 🤖 Generative AI Module (Stable Diffusion)
+
+Fruit Guard Pro also includes an optional **Generative AI component** based on **Stable Diffusion** for text-to-image synthesis.
+
+### Purpose
+
+- Generate synthetic fruit images  
+- Augment small datasets  
+- Simulate rare or hard-to-capture defects  
+- Improve model robustness  
+
+### Workflow
+
+```
+Text Prompt
+     ↓
+Latent Noise Initialization
+     ↓
+Iterative Denoising (Diffusion Model)
+     ↓
+VAE Decoder
+     ↓
+Synthetic Fruit Image
+```
+
+### Example Prompt
+
+```
+A mango with a small hole made by a worm in the middle
+```
+
+### How Generative AI Connects to Classification
+
+- Generated images can be added to the training dataset  
+- Used to test model behavior on rare defects  
+- Helps analyze failure cases  
+
+This creates a continuous improvement loop:
+
+```
+Generation → Training → Interpretation → Model Improvement
+```
+
