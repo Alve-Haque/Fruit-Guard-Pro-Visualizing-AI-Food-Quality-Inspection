@@ -2,52 +2,8 @@
 ### Visualizing AI-Powered Food Quality Inspection  
 **Interpretable Deep Learning for Fresh vs. Rotten Fruit Classification**
 
----
-
-## 📑 Table of Contents
-- [Overview](#overview)
-- [Problem Statement](#problem-statement)
-- [Project Objectives](#project-objectives)
-- [System Architecture](#system-architecture)
-- [Dataset](#dataset)
-- [Data Preprocessing Pipeline](#data-preprocessing-pipeline)
-- [Model Architecture](#model-architecture)
-- [Model Training Strategy](#model-training-strategy)
-- [Inference Pipeline](#inference-pipeline)
-- [Interpretability & Visualization](#interpretability--visualization)
-- [Generative AI Module](#generative-ai-module)
-- [Evaluation Metrics](#evaluation-metrics)
-- [Business Value](#business-value)
-- [Technologies Used](#technologies-used)
-- [Installation](#installation)
-- [Running the Project](#running-the-project)
-- [Future Improvements](#future-improvements)
-- [Author](#author)
-
----
 
 ## Overview
-
-
-## 📑 Table of Contents
-- [Problem Statement](#problem-statement)
-- [Project Objectives](#project-objectives)
-- [System Architecture](#system-architecture)
-- [Dataset](#dataset)
-- [Data Preprocessing Pipeline](#data-preprocessing-pipeline)
-- [Model Architecture](#model-architecture)
-- [Model Training Strategy](#model-training-strategy)
-- [Inference Pipeline](#inference-pipeline)
-- [Interpretability & Visualization](#interpretability--visualization)
-- [Generative AI Module](#generative-ai-module)
-- [Evaluation Metrics](#evaluation-metrics)
-- [Business Value](#business-value)
-- [Technologies Used](#technologies-used)
-- [Installation](#installation)
-- [Running the Project](#running-the-project)
-- [Future Improvements](#future-improvements)
-- [Author](#author)
-
 ---
 Fruit Guard Pro is an end-to-end deep learning system for automated fruit quality inspection.  
 The system classifies fruit images as **Fresh** or **Rotten** and explains its decisions using modern interpretability techniques.
@@ -62,6 +18,26 @@ Unlike traditional black-box models, Fruit Guard Pro provides visual insight int
 This makes the system reliable, transparent, and suitable for real-world deployment.
 
 ---
+
+## 📑 Table of Contents
+- [Problem Statement](#problem-statement)
+- [Project Objectives](#project-objectives)
+- [System Architecture](#system-architecture)
+- [Dataset](#dataset)
+- [Data Preprocessing Pipeline](#data-preprocessing-pipeline)
+- [Model Architecture](#model-architecture)
+- [Model Training Strategy](#model-training-strategy)
+- [Inference Pipeline](#inference-pipeline)
+- [Interpretability & Visualization](#interpretability--visualization)
+- [Generative AI Module](#generative-ai-module)
+- [Evaluation Metrics](#evaluation-metrics)
+- [Business Value](#business-value)
+- [Technologies Used](#technologies-used)
+- [Installation](#installation)
+- [Running the Project](#running-the-project)
+- [Future Improvements](#future-improvements)
+- [Author](#author)
+
 
 ## Problem Statement
 
@@ -86,7 +62,7 @@ There is a need for an automated system that can inspect fruit quickly, consiste
 ---
 
 ## System Architecture
-
+![Architecture Diagram](images/arch.png)
 ```
 Input Image
    |
@@ -168,103 +144,6 @@ Highlights regions responsible for classification.
 
 ---
 
-## Generative AI Module
-
-Uses Stable Diffusion for text-to-image generation.
-
----
-
-
----
-
-## 🤖 Generative AI Module
-
-Fruit Guard Pro also includes an optional **Generative AI component** based on **Stable Diffusion** for text-to-image synthesis.
-
-### Purpose
-- Generate synthetic fruit images  
-- Augment small datasets  
-- Simulate rare defects  
-- Improve robustness  
-
-### Workflow
-
-Text Prompt → Diffusion Model → VAE Decoder → Synthetic Image
-
-### Example Prompt
-
-A mango with a small hole made by a worm in the middle
-
-### Connection to Classification
-
-Generated images may be added to training data and used for stress-testing the classifier.
-
-
-## Evaluation Metrics
-
-- Accuracy  
-- Precision  
-- Recall  
-- F1-Score  
-- Confusion Matrix  
-
----
-
-## Business Value
-
-- Reduces labor cost  
-- Improves quality consistency  
-- Reduces food waste  
-- Builds trust through explainability  
-- Scalable deployment  
-
----
-
-## Technologies Used
-
-- Python  
-- PyTorch  
-- Matplotlib  
-- PIL  
-- Diffusers  
-- CUDA  
-
----
-
-## Installation
-
-```bash
-git clone https://github.com/yourusername/fruit-guard-pro.git
-cd fruit-guard-pro
-pip install -r requirements.txt
-```
-
----
-
-## Running the Project
-
-```bash
-jupyter notebook C3M2_Assignment.ipynb
-```
-
----
-
-## Future Improvements
-
-- Grad-CAM++  
-- Vision Transformers  
-- Real-time camera integration  
-- Multiclass defect detection  
-
----
-
-## Author
-
-Fruit Guard Pro Team
-
-
----
-
 ## 🤖 Generative AI Module (Stable Diffusion)
 
 Fruit Guard Pro also includes an optional **Generative AI component** based on **Stable Diffusion** for text-to-image synthesis.
@@ -307,4 +186,60 @@ This creates a continuous improvement loop:
 ```
 Generation → Training → Interpretation → Model Improvement
 ```
+
+
+## Evaluation Metrics
+
+- Accuracy  
+- Precision  
+- Recall  
+- F1-Score  
+- Confusion Matrix  
+
+---
+
+## Business Value
+
+- Reduces labor cost  
+- Improves quality consistency  
+- Reduces food waste  
+- Builds trust through explainability  
+- Scalable deployment  
+
+---
+
+## Technologies Used
+
+- Python  
+- PyTorch  
+- Matplotlib  
+- PIL  
+- Diffusers  
+- CUDA  
+
+---
+
+## Installation
+
+```bash
+git clone https://github.com/yourusername/fruit-guard-pro.git
+cd fruit-guard-pro
+pip install -r requirements.txt
+```
+
+
+---
+
+## Future Improvements
+
+- Grad-CAM++  
+- Vision Transformers  
+- Real-time camera integration  
+- Multiclass defect detection  
+
+---
+
+
+
+
 
