@@ -1,24 +1,4 @@
-# 🍎🥭🍅 Fruit Guard Pro
-
-## 📑 Table of Contents
-- [Overview](#-overview)
-- [Problem Statement](#-problem-statement)
-- [Solution Summary](#-solution-summary)
-- [System Architecture](#-system-architecture)
-- [Dataset](#-dataset)
-- [Technologies Used](#-technologies-used)
-- [Core Techniques](#-core-techniques)
-- [Evaluation Metrics](#-evaluation-metrics)
-- [Business Value](#-business-value)
-- [Real-World Use Cases](#-real-world-use-cases)
-- [Installation](#-installation)
-- [Running the Notebook](#-running-the-notebook)
-- [Future Improvements](#-future-improvements)
-- [Author](#-author)
-
----
-
-  
+# 🍎🥭🍅 Fruit Guard Pro  
 ### Visualizing AI-Powered Food Quality Inspection  
 **Interpretable Deep Learning for Fresh vs. Rotten Fruit Classification**
 
@@ -36,6 +16,23 @@ Instead of treating the model as a black box, this project opens it up—showing
 - How generative AI can synthesize realistic fruit images  
 
 This makes the system suitable for **real-world deployment**, where trust, transparency, and explainability are essential.
+
+
+
+## 📑 Table of Contents
+- [Problem Statement](#-problem-statement)
+- [Solution Summary](#-solution-summary)
+- [System Architecture](#-system-architecture)
+- [Dataset](#-dataset)
+- [Technologies Used](#-technologies-used)
+- [Core Techniques](#-core-techniques)
+- [Evaluation Metrics](#-evaluation-metrics)
+- [Business Value](#-business-value)
+- [Real-World Use Cases](#-real-world-use-cases)
+- [Installation](#-installation)
+- [Running the Notebook](#-running-the-notebook)
+- [Future Improvements](#-future-improvements)
+- [Author](#-author)
 
 ---
 
