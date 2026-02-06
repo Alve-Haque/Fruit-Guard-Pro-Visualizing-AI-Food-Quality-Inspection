@@ -34,9 +34,7 @@ This makes the system reliable, transparent, and suitable for real-world deploym
 - [Business Value](#business-value)
 - [Technologies Used](#technologies-used)
 - [Installation](#installation)
-- [Running the Project](#running-the-project)
 - [Future Improvements](#future-improvements)
-- [Author](#author)
 
 
 ## Problem Statement
@@ -141,6 +139,9 @@ Gradient-based pixel importance.
 
 ### Class Activation Maps (CAM)
 Highlights regions responsible for classification.
+![Architecture Diagram](assets/solution2.png)
+![Architecture Diagram](assets/solution3.png)
+![Architecture Diagram](assets/solution4.png)
 
 ---
 
