@@ -152,15 +152,6 @@ cd fruit-guard-pro
 pip install -r requirements.txt
 ```
 
----
-
-## ▶️ Running the Notebook
-
-```bash
-jupyter notebook C3M2_Assignment.ipynb
-```
-
----
 
 ## 🔮 Future Improvements
 
@@ -169,8 +160,4 @@ jupyter notebook C3M2_Assignment.ipynb
 - Multiclass defect detection  
 - Real-time camera integration  
 
----
 
-## 👨‍💻 Author
-
-Fruit Guard Pro Team
