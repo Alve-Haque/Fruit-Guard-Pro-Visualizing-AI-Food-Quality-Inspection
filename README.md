@@ -28,6 +28,27 @@
 
 ## Overview
 
+
+## 📑 Table of Contents
+- [Problem Statement](#problem-statement)
+- [Project Objectives](#project-objectives)
+- [System Architecture](#system-architecture)
+- [Dataset](#dataset)
+- [Data Preprocessing Pipeline](#data-preprocessing-pipeline)
+- [Model Architecture](#model-architecture)
+- [Model Training Strategy](#model-training-strategy)
+- [Inference Pipeline](#inference-pipeline)
+- [Interpretability & Visualization](#interpretability--visualization)
+- [Generative AI Module](#generative-ai-module)
+- [Evaluation Metrics](#evaluation-metrics)
+- [Business Value](#business-value)
+- [Technologies Used](#technologies-used)
+- [Installation](#installation)
+- [Running the Project](#running-the-project)
+- [Future Improvements](#future-improvements)
+- [Author](#author)
+
+---
 Fruit Guard Pro is an end-to-end deep learning system for automated fruit quality inspection.  
 The system classifies fruit images as **Fresh** or **Rotten** and explains its decisions using modern interpretability techniques.
 
@@ -152,6 +173,32 @@ Highlights regions responsible for classification.
 Uses Stable Diffusion for text-to-image generation.
 
 ---
+
+
+---
+
+## 🤖 Generative AI Module
+
+Fruit Guard Pro also includes an optional **Generative AI component** based on **Stable Diffusion** for text-to-image synthesis.
+
+### Purpose
+- Generate synthetic fruit images  
+- Augment small datasets  
+- Simulate rare defects  
+- Improve robustness  
+
+### Workflow
+
+Text Prompt → Diffusion Model → VAE Decoder → Synthetic Image
+
+### Example Prompt
+
+A mango with a small hole made by a worm in the middle
+
+### Connection to Classification
+
+Generated images may be added to training data and used for stress-testing the classifier.
+
 
 ## Evaluation Metrics
 
