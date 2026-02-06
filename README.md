@@ -174,7 +174,7 @@ Synthetic Fruit Image
 ```
 A mango with a small hole made by a worm in the middle
 ```
-
+![Architecture Diagram](synthetic/a_mango_with/img_42.png)
 ### How Generative AI Connects to Classification
 
 - Generated images can be added to the training dataset  
