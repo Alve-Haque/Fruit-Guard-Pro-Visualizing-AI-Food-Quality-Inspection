@@ -4,205 +4,187 @@
 
 ---
 
-## 🌟 Overview
-
-**Fruit Guard Pro** is an end-to-end deep learning project that demonstrates how **Convolutional Neural Networks (CNNs)** can be used not only to classify fruit quality (fresh vs. rotten), but also to **explain their own decisions** through powerful visualization and interpretability techniques.
-
-Instead of treating the model as a black box, this project opens it up—showing:
-
-- How features evolve inside the network  
-- Which pixels influence predictions  
-- Which regions drive final decisions  
-- How generative AI can synthesize realistic fruit images  
-
-This makes the system suitable for **real-world deployment**, where trust, transparency, and explainability are essential.
-
----
-
 ## 📑 Table of Contents
-- Problem Statement  
-- Solution Summary  
-- Data Preprocessing Pipeline  
-- Model Training Strategy  
-- Inference Pipeline  
-- System Architecture  
-- Dataset  
-- Technologies Used  
-- Core Techniques  
-- Evaluation Metrics  
-- Business Value  
-- Generative AI Module  
-- Real-World Use Cases  
-- Installation  
-- Running the Notebook  
-- Future Improvements  
-- Author  
+- [Overview](#overview)
+- [Problem Statement](#problem-statement)
+- [Project Objectives](#project-objectives)
+- [System Architecture](#system-architecture)
+- [Dataset](#dataset)
+- [Data Preprocessing Pipeline](#data-preprocessing-pipeline)
+- [Model Architecture](#model-architecture)
+- [Model Training Strategy](#model-training-strategy)
+- [Inference Pipeline](#inference-pipeline)
+- [Interpretability & Visualization](#interpretability--visualization)
+- [Generative AI Module](#generative-ai-module)
+- [Evaluation Metrics](#evaluation-metrics)
+- [Business Value](#business-value)
+- [Technologies Used](#technologies-used)
+- [Installation](#installation)
+- [Running the Project](#running-the-project)
+- [Future Improvements](#future-improvements)
+- [Author](#author)
 
 ---
 
-## 🎯 Problem Statement
+## Overview
 
-Manual inspection of fruit quality is:
+Fruit Guard Pro is an end-to-end deep learning system for automated fruit quality inspection.  
+The system classifies fruit images as **Fresh** or **Rotten** and explains its decisions using modern interpretability techniques.
 
-- Time-consuming  
+Unlike traditional black-box models, Fruit Guard Pro provides visual insight into:
+
+- What features the CNN learns  
+- Which pixels influence predictions  
+- Which regions drive classification  
+- How synthetic images can be generated using Generative AI  
+
+This makes the system reliable, transparent, and suitable for real-world deployment.
+
+---
+
+## Problem Statement
+
+Manual fruit inspection is:
+
+- Slow  
 - Subjective  
-- Expensive at scale  
+- Expensive  
 
-The goal is to build an **automated vision-based inspection system** that:
-
-1. Classifies fruit as **Fresh** or **Rotten**  
-2. Explains *why* the model made each decision  
-3. Provides visual tools for debugging and improvement  
+There is a need for an automated system that can inspect fruit quickly, consistently, and accurately while also providing explanations.
 
 ---
 
-## 💡 Solution Summary
+## Project Objectives
 
-Fruit Guard Pro combines:
-
-- A **pretrained ResNet-50 CNN**  
-- Gradient-based interpretability methods  
-- Activation-based visualization techniques  
-- Optional **Stable Diffusion** image generation  
-
-Together, these create a transparent and auditable AI pipeline.
+- Build a CNN-based fruit classifier  
+- Visualize internal feature representations  
+- Generate saliency and CAM heatmaps  
+- Enable synthetic image generation  
+- Demonstrate explainable AI in agriculture  
 
 ---
 
-## 🔁 Data Preprocessing Pipeline
-
-1. Resize images to 224×224  
-2. Convert image to tensor  
-3. Normalize using ImageNet mean & standard deviation  
-4. Add batch dimension  
-
-Normalization formula:
-
-x_norm = (x - μ) / σ  
-
-μ = (0.485, 0.456, 0.406)  
-σ = (0.229, 0.224, 0.225)
-
----
-
-## 🏋️ Model Training Strategy
-
-- Backbone: ResNet-50 (ImageNet pretrained)  
-- Final layer replaced with 2-class classifier  
-
-### Transfer Learning Steps
-1. Load pretrained ResNet-50  
-2. Replace final fully connected layer  
-3. Fine-tune on fruit dataset  
-
-### Loss Function
-Cross-Entropy Loss
-
-### Optimizer
-Adam
-
-### Training Loop
-Forward → Loss → Backpropagation → Weight Update  
-
-Best model saved using validation performance.
-
----
-
-## 🔮 Inference Pipeline
-
-1. Load trained model  
-2. Preprocess image  
-3. Forward pass  
-4. Softmax  
-5. Select highest probability class  
-
----
-
-## 🧠 System Architecture
+## System Architecture
 
 ```
-Image → Preprocessing → ResNet-50 CNN → Prediction
-                      ↘
-          Feature Maps / Saliency / CAM
-                      ↘
-                Interpretation
+Input Image
+   |
+Preprocessing
+   |
+ResNet-50 CNN
+   |
+Prediction (Fresh / Rotten)
+   |
+----------------------------
+| Feature Maps            |
+| Saliency Maps           |
+| Class Activation Maps   |
+----------------------------
+   |
+Interpretation
 ```
 
 ---
 
-## 📂 Dataset
+## Dataset
 
-- 234 images  
+- 234 fruit images  
 - Fruits: Apple, Mango, Tomato  
 - Classes:
-  - 0 = Fresh  
-  - 1 = Rotten  
+  - 0 → Fresh  
+  - 1 → Rotten  
 
 ---
 
-## ⚙️ Technologies Used
+## Data Preprocessing Pipeline
 
-Python, PyTorch, Matplotlib, PIL, Diffusers, CUDA
+1. Resize images to 224 × 224  
+2. Convert to PyTorch tensors  
+3. Normalize using ImageNet statistics  
+4. Add batch dimension  
 
 ---
 
-## 🔍 Core Techniques
+## Model Architecture
+
+- Backbone: ResNet-50  
+- Pretrained on ImageNet  
+- Final fully connected layer replaced with 2-class output  
+
+---
+
+## Model Training Strategy
+
+- Transfer Learning  
+- Cross-Entropy Loss  
+- Adam Optimizer  
+
+---
+
+## Inference Pipeline
+
+1. Load trained model  
+2. Preprocess input image  
+3. Forward pass  
+4. Apply Softmax  
+5. Choose highest probability class  
+
+---
+
+## Interpretability & Visualization
 
 ### Feature Hierarchy Visualization
-Visualizes internal CNN representations.
+Shows how representations evolve through CNN layers.
 
 ### Feature Map Strip
-Selects strongest channel per layer.
+Selects strongest activation channel per layer.
 
 ### Saliency Maps
 Gradient-based pixel importance.
 
-### Simplified CAM
-Region-level class evidence.
+### Class Activation Maps (CAM)
+Highlights regions responsible for classification.
 
 ---
 
-## 📊 Evaluation Metrics
+## Generative AI Module
+
+Uses Stable Diffusion for text-to-image generation.
+
+---
+
+## Evaluation Metrics
 
 - Accuracy  
 - Precision  
 - Recall  
-- F1-score  
+- F1-Score  
 - Confusion Matrix  
 
 ---
 
-## 🏭 Business Value
+## Business Value
 
-- Automated quality inspection  
-- Reduced labor cost  
-- Reduced food waste  
-- Consistent grading  
-- Explainable decisions  
-
----
-
-## 🧪 Generative AI Module (Stable Diffusion)
-
-- Text-to-image synthesis  
-- Dataset augmentation  
-- Rare defect simulation  
-
-Workflow:
-Prompt → Diffusion Model → VAE Decoder → Image
+- Reduces labor cost  
+- Improves quality consistency  
+- Reduces food waste  
+- Builds trust through explainability  
+- Scalable deployment  
 
 ---
 
-## 🚀 Real-World Use Cases
+## Technologies Used
 
-- Packing plants  
-- Supermarkets  
-- Warehouses  
-- Smart farms  
+- Python  
+- PyTorch  
+- Matplotlib  
+- PIL  
+- Diffusers  
+- CUDA  
 
 ---
 
-## 🛠️ Installation
+## Installation
 
 ```bash
 git clone https://github.com/yourusername/fruit-guard-pro.git
@@ -212,7 +194,7 @@ pip install -r requirements.txt
 
 ---
 
-## ▶️ Running the Notebook
+## Running the Project
 
 ```bash
 jupyter notebook C3M2_Assignment.ipynb
@@ -220,15 +202,15 @@ jupyter notebook C3M2_Assignment.ipynb
 
 ---
 
-## 🔮 Future Improvements
+## Future Improvements
 
 - Grad-CAM++  
 - Vision Transformers  
-- Real-time camera deployment  
-- Multi-class defects  
+- Real-time camera integration  
+- Multiclass defect detection  
 
 ---
 
-## 👨‍💻 Author
+## Author
 
 Fruit Guard Pro Team
