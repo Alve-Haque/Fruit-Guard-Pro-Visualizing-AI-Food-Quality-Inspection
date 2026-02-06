@@ -139,9 +139,9 @@ Gradient-based pixel importance.
 
 ### Class Activation Maps (CAM)
 Highlights regions responsible for classification.
-![Architecture Diagram](assets/solution2.png)
-![Architecture Diagram](assets/solution3.png)
-![Architecture Diagram](assets/solution4.png)
+![Architecture Diagram](images/solution2.jpg)
+![Architecture Diagram](images/solution3.jpg)
+![Architecture Diagram](images/solution4.jpg)
 
 ---
 
