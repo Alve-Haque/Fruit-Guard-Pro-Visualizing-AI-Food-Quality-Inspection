@@ -18,7 +18,6 @@ Instead of treating the model as a black box, this project opens it up—showing
 This makes the system suitable for **real-world deployment**, where trust, transparency, and explainability are essential.
 
 
-
 ## 📑 Table of Contents
 - [Problem Statement](#-problem-statement)
 - [Solution Summary](#-solution-summary)
